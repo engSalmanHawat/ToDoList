@@ -4,31 +4,7 @@ function loadTasks(){
 	if(localStorage.getItem("localStorageItems")==null) return;
 
 	let tasks=Array.form(JSON.parse(localStorage.getItem("localStorageItems")));
-
-	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 window.addEventListener('load',(e) => {
 	e.preventDefault();
 	if (GetItems) {
@@ -46,8 +22,7 @@ window.addEventListener('load',(e) => {
 
  }});
 
-
-	 var colorEl;
+	var colorEl;
 	var task1=document.querySelector(".task");
  	const clear2= document.querySelector(".clear");
 	var form = document.querySelector("#new-task-form");
@@ -68,13 +43,7 @@ window.addEventListener('load',(e) => {
 		}else{
 			localStorageItems(input);
 			showList(input);	
-		}});		
-
-
-
-
-
-
+		}});	
 
 //////////////////////////Function Add Items to Local Storage ///////////////////////////////
 function localStorageItems(task_item){
@@ -176,63 +145,3 @@ function showList(task_item){
 			list_el.removeChild(task_el);
 		});
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // function editElement(){
-// // 	console.log(input.value);
-// // };
-// // function removeElement(){
-// // 	console.log(input.value);
-// // };
-// // //////////////////
-// // listActions.addEventListener("click", function(event){
-// //     const element = event.target; // return the clicked element inside list
-// //    	var elementTaskD=document.getElementsByClassName("done");	 // complete or delete
-// //    	var elementTaskT=document.getElementsByClassName("delete");	 // complete or delete
-// //    	var elementTaskE=document.getElementsByClassName("edit");	 // complete or delete
-    
-// //     if(elementTaskD){
-// //         colorDone(element);
-// //     }else if(elementTaskE){
-// //         editElement(element);
-// //     }else if (elementTaskT) {
-// // 		removeElement(element);
-// // 	}
-    
-// //     // add item to localstorage ( this code must be added where the LIST array is updated)
-// //     localStorage.setItem("localStorageItems", JSON.stringify(listActions));
-// // });
